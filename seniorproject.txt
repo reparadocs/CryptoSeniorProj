@@ -1,0 +1,5 @@
+1) Researching different algorithmic trading techniques and implementing at least one and run it on historical data provided by quantopian.com or something like it. Then prove that it works well (and wasn't overfitted) by running it in real time and seeing how much money it could potentially generate (it probably wouldn't execute any real trades). I would also write a paper about the different approaches that could be used and the pros and cons of each and why I ended up using the algorithm I chose.
+
+2) Reimplement git in python or write an entirely new version control system designed to be easier to use. I think this would be a great learning experience to write a version control system from scratch and it would lead to me being able to better understand current version control systems and the tradeoffs that they make. 
+
+3) Creating a "minimum viable blockchain" (inspired by https://www.igvita.com/2014/05/05/minimum-viable-block-chain/), this would be a great learning experience and lead to me better understanding how current blockchains work. I am not sure what the use case of the new block chain would be but that could be part of my research as well.

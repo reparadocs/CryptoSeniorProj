@@ -1,0 +1,27 @@
+.form-outer-container {
+  width: 40%; 
+  display: block; 
+  margin: auto;
+}
+
+.form-inner-container {
+  border: solid black 1px; 
+  margin: 20px; 
+  border-radius: 10px; 
+  background: #EEEEEE; 
+  padding: 10px;
+}
+
+.error-box {
+    color: #e13760;
+    font-size: 14px;
+    background: #fffbfc;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 6px 0 10px 0;
+    line-height: 18px;
+
+}
+
+label.required-ast:after { content: ' *' }

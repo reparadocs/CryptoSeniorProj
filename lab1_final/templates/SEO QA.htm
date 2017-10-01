@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)http://localhost:8000/crawler/checkout/?cardCVC=122&couponCode=&stripeToken=tok_19iXP12eZvKYlo2CHAtBF5Xw -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://localhost:8000/favicon.ico">
+
+    <title>SEO QA</title>
+
+    <!-- Google Tag Manager -->
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K98SZMD"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K98SZMD');</script>
+    <!-- End Google Tag Manager -->
+        <script src="./SEO QA_files/jquery.min.js"></script>
+    
+<script type="text/javascript" src="./SEO QA_files/saved_resource"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+</script>
+      <script src="./SEO QA_files/jquery.payment.min.js"></script>
+
+        <link href="./SEO QA_files/font-awesome.min.css" rel="stylesheet">
+<style type="text/css" media="screen">
+    .has-error input {
+      border-width: 2px;
+    }
+    .validation.text-danger:after {
+      content: 'Validation failed';
+    }
+    .validation.text-success:after {
+      content: 'Validation passed';
+    }
+  </style>
+
+  <script>
+    jQuery(function($) {
+      $('[data-numeric]').payment('restrictNumeric');
+      $('.cc-number').payment('formatCardNumber');
+      $('.cc-exp').payment('formatCardExpiry');
+      $('.cc-cvc').payment('formatCardCVC');
+
+      $.fn.toggleInputError = function(erred) {
+        this.parent('.form-group').toggleClass('has-error', erred);
+        return this;
+      };
+
+      $.fn.toggleGroupInputError = function(erred) {
+        this.parent('.input-group').toggleClass('has-error', erred);
+        return this;
+      };
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var cardType = $.payment.cardType($('.cc-number').val());
+        $('.cc-number').toggleGroupInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+        $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+        $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+        $('.validation').removeClass('text-danger text-success');
+        $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
+      });
+    });
+  </script>
+
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="./SEO QA_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./SEO QA_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./SEO QA_files/jumbotron.css" rel="stylesheet">
+
+    <link href="./SEO QA_files/seo.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+    <!-- Google Tag Manager (noscript) -->
+  <noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K98SZMD"
+  height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://localhost:8000/crawler/">SEO QA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        
+        <a href="http://localhost:8000/crawler/logout/">Logout</a>
+        <a href="http://localhost:8000/crawler/edit_account/">Edit Account</a>
+        
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    
+    
+<!-- CREDIT CARD FORM STARTS HERE -->
+<div class="form-outer-container" style="padding-top: 20px">
+<div class="panel panel-default credit-card-box">
+  <div class="panel-heading display-table">
+    <div class="row display-tr" style="margin: auto;">
+      <h3 class="panel-title display-td" style="float: left; margin: 10px 10px;">Payment Details</h3>
+      <div class="display-td">                            
+        <img class="img-responsive pull-right" src="./SEO QA_files/accepted_c22e0.png">
+      </div>
+    </div>                    
+  </div>
+  <div class="panel-body">
+    <form role="form" id="payment-form">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="cc-number">CARD NUMBER</label>
+            <div class="input-group">
+              <input id="cc-number" data-stripe="number" type="tel" class="form-control cc-number unknown" placeholder="Valid Card Number" autocomplete="cc-number" required="" autofocus="">
+              <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+            </div>
+          </div>                            
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-7 col-md-7">
+          <div class="form-group">
+            <label for="cc-cvc"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+            <input type="tel" id="cc-exp" data-stripe="exp" class="form-control cc-exp" placeholder="MM / YY" autocomplete="cc-exp" required="">
+          </div>
+        </div>
+        <div class="col-xs-5 col-md-5 pull-right">
+          <div class="form-group">
+            <label for="cc-cvc">CVC CODE</label>
+            <input type="tel" class="form-control cc-cvc" name="cardCVC" data-stripe="cvc" placeholder="CVC" autocomplete="cc-csc" required="">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="zipcode">ZIP CODE</label>
+            <input size="6" type="numeric" class="form-control" name="zipcode" data-stripe="address_zip" data-numeric="">
+          </div>
+        </div>                        
+      </div>
+                <div class="payment-errors error-box" style="
+    hidden: true;
+"></div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success btn-lg btn-block" type="submit">Start Subscription</button>
+        </div>
+      </div>
+      <div class="row" style="display:none;">
+        <div class="col-xs-12">
+          <p class="payment-errors"></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> 
+</div>           
+<!-- CREDIT CARD FORM ENDS HERE -->
+<script>
+$(function() {
+  var $form = $('#payment-form');
+  $form.submit(function(event) {
+    // Disable the submit button to prevent repeated clicks:
+    $form.find('.submit').prop('disabled', true);
+
+    // Request a token from Stripe:
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from being submitted:
+    return false;
+  });
+});
+
+function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+
+  if (response.error) { // Problem!
+    console.log(response.error);
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+    console.log(token);
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
+ function enableBtn(){
+    document.getElementById("button1").disabled = false;
+   }
+</script>
+
+    
+
+      <footer style="position: relative;
+   bottom: 0px;
+   width: 100%;
+   margin-top:100px">
+
+        <p>© 2016 Alligator Interactive, Inc.</p>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./SEO QA_files/jquery.min(1).js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./SEO QA_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./SEO QA_files/ie10-viewport-bug-workaround.js"></script>
+      
+
+    
+<iframe name="stripeXDM_default63622_provider" id="stripeXDM_default63622_provider" src="./SEO QA_files/channel.html" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"></iframe></body></html>
